@@ -1,0 +1,23 @@
+/** @type {import('ts-jest').JestConfigWithTsJest} */
+module.exports = {
+  preset: 'ts-jest',
+  testEnvironment: 'node',
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/src/$1',
+  },
+  transform: {
+    '^.+\\.tsx?$': [
+      'ts-jest',
+      {
+        tsconfig: {
+          module: 'commonjs',
+          moduleResolution: 'node',
+          lib: ['ES2020'],
+          target: 'ES2020',
+          types: ['jest'],
+          allowImportingTsExtensions: true,
+        },
+      },
+    ],
+  },
+}

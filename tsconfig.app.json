@@ -17,6 +17,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
+    "types": ["jest"],
     "paths": {
       "@/*": ["./src/*"],
       "#build/ui": [
